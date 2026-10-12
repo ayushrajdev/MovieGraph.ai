@@ -1,0 +1,29 @@
+{
+    "name": "movie-recommendation",
+    "version": "1.0.0",
+    "main": "main.js",
+    "scripts": {
+        "test": "node --env-file=.env src/testConnection.js",
+        "index": "node --env-file=.env src/indexing.js",
+        "dev": "node --env-file=.env src/querying.js"
+    },
+    "author": "",
+    "license": "ISC",
+    "description": "",
+    "type": "module",
+    "dependencies": {
+        "@google/genai": "^2.23.0",
+        "@langchain/core": "^1.2.14",
+        "@langchain/google-genai": "^2.3.2",
+        "@langchain/langgraph": "^1.4.19",
+        "@langchain/openai": "^1.6.2",
+        "@langfuse/langchain": "^5.13.0",
+        "@langfuse/otel": "^5.13.0",
+        "@langfuse/tracing": "^5.13.0",
+        "@opentelemetry/sdk-node": "^0.222.0",
+        "@pinecone-database/pinecone": "^9.0.0",
+        "dotenv": "^18.0.1",
+        "neo4j-driver": "^6.2.0",
+        "pdf-parse": "^2.4.5"
+    }
+}

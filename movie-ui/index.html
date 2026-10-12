@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    />
+
+    <title>MovieGraph</title>
+
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <!-- ============================= -->
+    <!-- APP -->
+    <!-- ============================= -->
+
+    <div class="app">
+
+        <!-- ============================= -->
+        <!-- HEADER -->
+        <!-- ============================= -->
+
+        <header class="header">
+
+            <div class="logo">
+                <div class="logo-icon">M</div>
+
+                <div>
+                    <div class="logo-title">MovieGraph</div>
+                    <div class="logo-subtitle">
+                        Explore your movie knowledge graph
+                    </div>
+                </div>
+            </div>
+
+        </header>
+
+
+        <!-- ============================= -->
+        <!-- SEARCH -->
+        <!-- ============================= -->
+
+        <section class="search-section">
+
+            <div class="search-container">
+
+                <div class="search-icon">
+                    🔍
+                </div>
+
+                <input
+                    id="searchInput"
+                    type="text"
+                    placeholder="Ask anything... e.g. Movies like Inception"
+                    autocomplete="off"
+                />
+
+                <button id="searchButton">
+                    Search
+                </button>
+
+            </div>
+
+            <div class="search-suggestions">
+
+                <button class="suggestion">
+                    Movies like Inception
+                </button>
+
+                <button class="suggestion">
+                    Action movies with Tom Hardy
+                </button>
+
+                <button class="suggestion">
+                    Movies directed by Christopher Nolan
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- ============================= -->
+        <!-- MAIN CONTENT -->
+        <!-- ============================= -->
+
+        <main class="main">
+
+            <!-- ============================= -->
+            <!-- HOME VIEW -->
+            <!-- ============================= -->
+
+            <section id="homeView">
+
+                <div class="section-header">
+
+                    <div>
+                        <h1>Explore Movies</h1>
+
+                        <p>
+                            Browse movies from your knowledge graph
+                        </p>
+                    </div>
+
+                    <div
+                        id="movieCount"
+                        class="movie-count"
+                    >
+                        0 movies
+                    </div>
+
+                </div>
+
+
+                <div
+                    id="movieGrid"
+                    class="movie-grid"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- SEARCH RESULT VIEW -->
+            <!-- ============================= -->
+
+            <section
+                id="searchView"
+                class="hidden"
+            >
+
+                <button
+                    id="backFromSearch"
+                    class="back-button"
+                >
+                    ← Back
+                </button>
+
+                <div class="section-header">
+
+                    <div>
+
+                        <h1>Search Results</h1>
+
+                        <p id="searchQueryText"></p>
+
+                    </div>
+
+                </div>
+
+                <div
+                    id="searchAnswer"
+                    class="search-answer hidden"
+                >
+                </div>
+
+                <div
+                    id="searchResults"
+                    class="movie-grid"
+                >
+                </div>
+
+            </section>
+
+
+            <!-- ============================= -->
+            <!-- MOVIE DETAIL VIEW -->
+            <!-- ============================= -->
+
+            <section
+                id="movieView"
+                class="hidden"
+            >
+
+                <button
+                    id="backButton"
+                    class="back-button"
+                >
+                    ← Back to movies
+                </button>
+
+
+                <!-- Movie Hero -->
+
+                <div
+                    id="movieDetails"
+                    class="movie-details"
+                >
+                </div>
+
+
+                <!-- Similar Movies -->
+
+                <section class="similar-section">
+
+                    <div class="section-header">
+
+                        <div>
+
+                            <h2>
+                                Similar Movies
+                            </h2>
+
+                            <p>
+                                Movies with similar genres,
+                                themes and characteristics
+                            </p>
+
+                        </div>
+
+                    </div>
+
+
+                    <div
+                        id="similarMovies"
+                        class="movie-grid"
+                    >
+                    </div>
+
+                </section>
+
+            </section>
+
+        </main>
+
+
+        <!-- ============================= -->
+        <!-- LOADING -->
+        <!-- ============================= -->
+
+        <div
+            id="loading"
+            class="loading hidden"
+        >
+
+            <div class="loader"></div>
+
+            <p>
+                Searching your movie knowledge graph...
+            </p>
+
+        </div>
+
+
+        <!-- ============================= -->
+        <!-- FOOTER -->
+        <!-- ============================= -->
+
+        <footer class="footer">
+
+            <span>
+                MovieGraph
+            </span>
+
+            <span>
+                GraphRAG Movie Explorer
+            </span>
+
+        </footer>
+
+    </div>
+
+
+    <script src="app.js" type="module"></script>
+
+</body>
+</html>
